@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Clube Régia Real — plano pronto e gente junto</title>
 <meta name="description" content="A comunidade anual da nutricionista Vitória Régia: plano alimentar montado pra sua rotina, cardápio semanal com lista de compras, treinos, app e um grupo de mulheres no WhatsApp.">
-<meta name="theme-color" content="#fff7f4">
+<meta name="theme-color" content="#fce8ef">
 <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
 
@@ -55,28 +55,28 @@
    VARIÁVEIS
    ============================================================ */
 :root {
-  --aurora:       #fff7f4;
-  --petala:       #fbe6df;
-  --petala-forte: #f7d9d0;
+  --aurora:       #fdf9fb;
+  --petala:       #fce8ef;
+  --petala-forte: #f0dde5;
   --branco:       #ffffff;
-  --cobre:        #b03a42;
-  --cobre-texto:  #8c2a32;
-  --cobre-claro:  #e39aa0;
-  --vinho:        #6b2b3a;
-  --vinho-fundo:  #4a1c28;
-  --vinho-escuro: #33121b;
-  --rosa:         #e8a6ab;
-  --tinta:        #4a3238;
-  --tinta-suave:  #5c484f;
+  --cobre:        #e8517a;
+  --cobre-texto:  #c73560;
+  --cobre-claro:  #f2a0b8;
+  --vinho:        #a02448;
+  --vinho-fundo:  #7a1535;
+  --vinho-escuro: #1a0a0e;
+  --rosa:         #f5b3c6;
+  --tinta:        #222222;
+  --tinta-suave:  #555555;
   --raio:         18px;
   --raio-peq:     12px;
   --raio-btn:     999px;
   --largura:      1080px;
   --estreita:     720px;
-  --linha:        rgba(74, 50, 56, 0.12);
-  --linha-clara:  rgba(255, 247, 244, 0.2);
-  --sombra:       0 18px 40px -24px rgba(107, 43, 58, 0.45);
-  --sombra-alta:  0 26px 60px -28px rgba(107, 43, 58, 0.5);
+  --linha:        rgba(34, 34, 34, 0.12);
+  --linha-clara:  rgba(253, 249, 251, 0.2);
+  --sombra:       0 18px 40px -24px rgba(199, 53, 96, 0.45);
+  --sombra-alta:  0 26px 60px -28px rgba(199, 53, 96, 0.5);
   --fonte-titulo: "Plus Jakarta Sans", system-ui, sans-serif;
   --fonte-enfase: "Playfair Display", Georgia, serif;
   --fonte-corpo:  "Plus Jakarta Sans", system-ui, sans-serif;
@@ -88,10 +88,10 @@
    RESET & BASE
    ============================================================ */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; background: var(--vinho-fundo); }
+html { scroll-behavior: smooth; background: var(--branco); }
 body {
   margin: 0;
-  background: var(--aurora);
+  background: var(--branco);
   color: var(--tinta);
   font-family: var(--fonte-corpo);
   font-size: 17px;
@@ -102,7 +102,7 @@ img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
 h1, h2, h3 {
   font-family: var(--fonte-titulo);
-  color: var(--vinho);
+  color: var(--tinta);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: -0.022em;
@@ -121,7 +121,7 @@ p:last-child { margin-bottom: 0; }
   font-weight: 500;
   color: var(--cobre-texto);
 }
-.vinho-bg .sentimento { color: var(--rosa); }
+.vinho-bg .sentimento { color: var(--cobre-texto); }
 
 .env { width: min(100% - 2.4rem, var(--largura)); margin-inline: auto; }
 .env--estreita { width: min(100% - 2.4rem, var(--estreita)); margin-inline: auto; }
@@ -138,7 +138,7 @@ p:last-child { margin-bottom: 0; }
   padding: 1.1rem 2.3rem;
   border: 0;
   border-radius: var(--raio-btn);
-  background: linear-gradient(170deg, #1aa251 0%, #128c68 55%, #0c6e57 100%);
+  background: linear-gradient(170deg, #4caf84 0%, #3d9d74 55%, #2e8a62 100%);
   color: var(--branco);
   font-family: inherit;
   font-size: 1rem;
@@ -149,14 +149,14 @@ p:last-child { margin-bottom: 0; }
   text-decoration: none;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.22);
   cursor: pointer;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 8px 22px -10px rgba(12, 110, 87, 0.7);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 8px 22px -10px rgba(46, 138, 98, 0.7);
   transition: transform 0.18s ease;
 }
 .btn:hover {
   transform: translateY(-2px);
-  background: linear-gradient(170deg, #169146 0%, #0f7c5c 55%, #0a5f4b 100%);
+  background: linear-gradient(170deg, #43a178 0%, #358f68 55%, #277b57 100%);
 }
-.btn:active { transform: translateY(0); box-shadow: inset 0 2px 6px rgba(6, 60, 46, 0.35); }
+.btn:active { transform: translateY(0); box-shadow: inset 0 2px 6px rgba(28, 92, 66, 0.35); }
 .btn:focus-visible { outline: 3px solid var(--vinho); outline-offset: 3px; }
 .btn-zap { flex: none; width: 1.3em; height: 1.3em; fill: currentColor; }
 
@@ -177,9 +177,9 @@ p:last-child { margin-bottom: 0; }
 .secao { padding: clamp(3rem, 6vw, 5rem) 0; }
 .secao + .secao { padding-top: clamp(2rem, 4vw, 3.5rem); }
 
-.vinho-bg { background: var(--vinho-fundo); color: var(--petala); }
-.vinho-bg h2, .vinho-bg h3 { color: var(--aurora); }
-.petala-bg { background: var(--petala); }
+.vinho-bg { background: var(--aurora); color: var(--tinta); }
+.vinho-bg h2, .vinho-bg h3 { color: var(--tinta); }
+.petala-bg { background: var(--branco); }
 
 /* ============================================================
    HERO
@@ -188,8 +188,8 @@ p:last-child { margin-bottom: 0; }
   position: relative;
   overflow: hidden;
   padding: clamp(2rem, 5svh, 4rem) 0 clamp(3rem, 6vw, 5rem);
-  background: var(--vinho-fundo);
-  color: var(--petala);
+  background: var(--petala);
+  color: var(--tinta);
 }
 .hero .env {
   position: relative;
@@ -208,7 +208,7 @@ p:last-child { margin-bottom: 0; }
   width: min(36vw, 340px);
   z-index: 1;
   aspect-ratio: 616 / 698;
-  opacity: 0.08;
+  opacity: 0.16;
   filter: blur(3px);
   pointer-events: none;
 }
@@ -221,53 +221,52 @@ p:last-child { margin-bottom: 0; }
           mask: var(--emblema) center/contain no-repeat;
 }
 
-.hero-pilula {
-  display: inline-block;
-  padding: 0.45em 1.1em;
-  border-radius: var(--raio-btn);
-  border: 1.5px solid var(--rosa);
-  color: var(--rosa);
-  font-size: clamp(0.7rem, 1.3vw, 0.88rem);
-  font-weight: 800;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  margin-bottom: 1.2rem;
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px;
+  background: var(--branco);
+  border-bottom: 1px solid var(--petala-forte);
 }
-.hero h1 { color: var(--aurora); margin-bottom: 0.5em; font-size: clamp(1.8rem, 4.5vw, 2.8rem); }
-.hero h1 strong { color: var(--rosa); font-weight: 700; }
+.topo img { height: 58px; width: auto; }
+.hero h1 { color: var(--tinta); margin-bottom: 0.5em; font-size: clamp(1.8rem, 4.5vw, 2.8rem); }
+.hero h1 strong { color: var(--cobre); font-weight: 700; }
 .hero .sub {
   font-size: clamp(1rem, 2vw, 1.15rem);
-  color: var(--petala);
+  color: var(--tinta-suave);
   max-width: 48ch;
   margin-bottom: 1.8rem;
   line-height: 1.6;
 }
-.hero .sub strong { color: var(--aurora); }
+.hero .sub strong { color: var(--tinta); }
 
 .hero-foto-wrap {
   position: relative;
   margin: 0;
   border-radius: var(--raio);
   overflow: hidden;
-  aspect-ratio: 3 / 4;
-  background: var(--vinho);
-  border: 2px solid rgba(255,255,255,0.12);
+  aspect-ratio: 1 / 1;
+  background: var(--petala-forte);
+  border: 2px solid var(--petala-forte);
   box-shadow: var(--sombra-alta);
 }
-.hero-foto-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; }
+.hero-foto-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
 
 @media (max-width: 899px) {
-  .hero .env { text-align: left; }
+  .hero .env { text-align: left; row-gap: 1.2rem; }
   .hero-texto { order: 1; }
-  .hero-foto-wrap { order: 0; max-width: 230px; width: 100%; aspect-ratio: 3 / 4; border-radius: var(--raio-peq); align-self: center; justify-self: center; }
+  .hero-foto-wrap { order: 0; margin-bottom: 0.8rem; max-width: 260px; width: 100%; aspect-ratio: 1 / 1; border-radius: var(--raio-peq); align-self: center; justify-self: center; }
 }
 @media (max-width: 560px) {
   .hero { padding: 1.2rem 0 1.6rem; }
   .hero h1 { font-size: clamp(1.3rem, 5.8vw, 1.7rem); margin-bottom: 0.3em; }
   .hero .sub { font-size: 0.88rem; margin-bottom: 1.2rem; line-height: 1.5; }
   .hero .btn { padding: 0.85rem 1.3rem; font-size: 0.88rem; }
-  .hero-pilula { margin-bottom: 0.8rem; }
-  .hero-foto-wrap { max-width: 207px; }
+  .hero .env { row-gap: 0.8rem; }
+  .hero-foto-wrap { max-width: 235px; }
+  .topo { padding: 10px 16px; }
+  .topo img { height: 46px; }
 }
 
 /* ============================================================
@@ -307,11 +306,11 @@ p:last-child { margin-bottom: 0; }
    ============================================================ */
 .virada {
   padding: clamp(3rem, 6vw, 5rem) 0;
-  background: var(--vinho-fundo);
-  color: var(--petala);
+  background: var(--aurora);
+  color: var(--tinta);
   text-align: center;
 }
-.virada h2 { color: var(--aurora); }
+.virada h2 { color: var(--tinta); }
 .virada p { font-size: 1.05rem; max-width: 56ch; margin-inline: auto; }
 .virada-lista {
   display: grid;
@@ -327,8 +326,8 @@ p:last-child { margin-bottom: 0; }
   gap: 0.8rem;
   padding: 1rem 1.2rem;
   border-radius: var(--raio-peq);
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: var(--branco);
+  border: 1px solid var(--petala-forte);
 }
 .virada-icone {
   flex: none;
@@ -336,41 +335,49 @@ p:last-child { margin-bottom: 0; }
   place-content: center;
   width: 1.6rem; height: 1.6rem;
   border-radius: 50%;
-  background: rgba(176, 58, 66, 0.3);
-  color: var(--rosa);
+  background: var(--petala);
+  color: var(--cobre-texto);
   font-size: 0.7rem;
   font-weight: 800;
 }
 .virada-item p { font-size: 0.95rem; margin: 0; }
-.virada-item strong { color: var(--aurora); }
+.virada-item strong { color: var(--tinta); }
 
 /* ============================================================
    MÉTODO 4C
    ============================================================ */
 .metodo-grade {
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
   margin-top: 2.4rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
 }
 .metodo-card {
-  position: relative;
-  padding: 1.7rem;
-  border-radius: var(--raio);
+  padding: 1.9rem 1.4rem;
+  border-radius: 14px;
   background: var(--branco);
   border: 1px solid var(--petala-forte);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+  text-align: center;
 }
-.metodo-card h3 { margin-bottom: 0.35rem; }
-.metodo-card p { font-size: 0.95rem; color: var(--tinta-suave); }
+.metodo-card h3 { margin-bottom: 0.6rem; font-size: 1.06rem; font-weight: 700; }
+.metodo-card p { font-size: 0.9rem; color: var(--tinta-suave); line-height: 1.7; }
 .metodo-num {
-  position: absolute;
-  top: 1.15rem;
-  right: 1.2rem;
-  font-size: 0.8rem;
+  display: grid;
+  place-content: center;
+  width: 52px; height: 52px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e8517a, #c73560);
+  color: var(--branco);
+  font-size: 1.35rem;
   font-weight: 700;
-  color: var(--cobre-claro);
+  line-height: 1;
   pointer-events: none;
 }
+.metodo-card:nth-child(2) .metodo-num { background: linear-gradient(135deg, #e86851, #c73530); }
+.metodo-card:nth-child(3) .metodo-num { background: linear-gradient(135deg, #51a0e8, #2e5ac7); }
+.metodo-card:nth-child(4) .metodo-num { background: linear-gradient(135deg, #4caf84, #2e8a62); }
 
 /* ============================================================
    COMO FUNCIONA (2 fases)
@@ -384,22 +391,22 @@ p:last-child { margin-bottom: 0; }
 .fase {
   padding: clamp(1.4rem, 3vw, 2rem);
   border-radius: var(--raio);
-  background: rgba(255,255,255,0.05);
-  border: 1px solid var(--linha-clara);
+  background: var(--branco);
+  border: 1px solid var(--petala-forte);
 }
 .fase-tag {
   display: inline-block;
   padding: 0.25rem 0.75rem;
   border-radius: var(--raio-btn);
-  border: 1px solid rgba(255,255,255,0.3);
-  color: var(--rosa);
+  border: 1px solid var(--cobre-claro);
+  color: var(--cobre-texto);
   font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   margin-bottom: 0.8rem;
 }
-.fase h3 { color: var(--aurora); margin-bottom: 0.4rem; }
+.fase h3 { color: var(--tinta); margin-bottom: 0.4rem; }
 .fase p { font-size: 0.95rem; }
 .fase-lista {
   list-style: none;
@@ -419,7 +426,7 @@ p:last-child { margin-bottom: 0; }
   top: 0.55em;
   width: 6px; height: 6px;
   border-radius: 50%;
-  background: var(--rosa);
+  background: var(--cobre);
 }
 
 /* ============================================================
@@ -461,17 +468,17 @@ p:last-child { margin-bottom: 0; }
   place-content: center;
   width: 2.8rem; height: 2.8rem;
   padding: 0;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid var(--petala-forte);
   border-radius: 50%;
-  background: linear-gradient(170deg, rgba(255,255,255,0.14), rgba(255,255,255,0.04));
-  color: var(--aurora);
+  background: var(--branco);
+  color: var(--cobre-texto);
   cursor: pointer;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 6px 14px -8px rgba(0,0,0,0.5);
+  box-shadow: 0 6px 14px -8px rgba(199, 53, 96, 0.45);
   transition: transform 0.15s, background 0.15s;
 }
 .depo-nav button:hover {
   transform: translateY(-2px);
-  background: linear-gradient(170deg, rgba(255,255,255,0.24), rgba(255,255,255,0.08));
+  background: var(--petala);
 }
 .depo-nav button:active { transform: translateY(0); }
 .depo-nav button[disabled] { opacity: 0.35; cursor: default; }
@@ -489,11 +496,11 @@ p:last-child { margin-bottom: 0; }
 .recebe-card {
   padding: 1.6rem;
   border-radius: var(--raio);
-  background: rgba(255,255,255,0.05);
-  border: 1px solid var(--linha-clara);
+  background: var(--branco);
+  border: 1px solid var(--petala-forte);
 }
-.recebe-card h3 { color: var(--aurora); margin-bottom: 0.35rem; }
-.recebe-card p { font-size: 0.95rem; color: var(--petala); }
+.recebe-card h3 { color: var(--tinta); margin-bottom: 0.35rem; }
+.recebe-card p { font-size: 0.95rem; color: var(--tinta-suave); }
 .recebe-icone {
   display: flex;
   align-items: center;
@@ -501,11 +508,11 @@ p:last-child { margin-bottom: 0; }
   width: 2.6rem; height: 2.6rem;
   margin-bottom: 0.9rem;
   border-radius: 50%;
-  background: rgba(232, 166, 171, 0.15);
+  background: var(--petala);
 }
 .recebe-icone svg {
   width: 1.2rem; height: 1.2rem;
-  fill: none; stroke: var(--rosa);
+  fill: none; stroke: var(--cobre);
   stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
 }
 
@@ -538,7 +545,7 @@ p:last-child { margin-bottom: 0; }
   gap: 0.7rem;
   padding: 0.6rem 0.7rem;
   border-radius: var(--raio-btn);
-  background: rgba(40, 22, 28, 0.82);
+  background: rgba(45, 8, 20, 0.82);
   backdrop-filter: blur(6px);
   color: var(--branco);
 }
@@ -605,12 +612,13 @@ p:last-child { margin-bottom: 0; }
 .cta-final {
   text-align: center;
   padding: clamp(3rem, 7vw, 5.5rem) 0;
-  background: var(--vinho-fundo);
+  background: linear-gradient(160deg, var(--cobre-texto), var(--vinho-fundo));
   color: var(--petala);
 }
-.cta-final h2 { color: var(--aurora); }
+.cta-final h2 { color: var(--branco); }
 .cta-final p { font-size: 1.05rem; max-width: 50ch; margin-inline: auto; }
 .cta-final .btn { margin-top: 1.6rem; }
+.cta-final .sentimento { color: var(--petala); }
 .cta-final-selos {
   display: flex;
   flex-wrap: wrap;
@@ -643,8 +651,8 @@ p:last-child { margin-bottom: 0; }
   left: 0; right: 0; bottom: 0;
   z-index: 40;
   padding: 0.7rem 1rem calc(0.7rem + env(safe-area-inset-bottom));
-  background: rgba(74, 28, 40, 0.97);
-  border-top: 1px solid var(--linha-clara);
+  background: rgba(252, 232, 239, 0.97);
+  border-top: 1px solid var(--petala-forte);
   transform: translateY(110%);
   visibility: hidden;
   transition: transform 0.25s ease, visibility 0.25s;
@@ -687,7 +695,7 @@ p:last-child { margin-bottom: 0; }
   background: var(--petala);
   overflow: visible;
 }
-.lupa::backdrop { background: rgba(38, 14, 20, 0.78); }
+.lupa::backdrop { background: rgba(40, 7, 18, 0.78); }
 .lupa img { width: 100%; height: auto; display: block; border-radius: var(--raio); }
 .lupa-fechar {
   position: absolute;
@@ -732,12 +740,16 @@ body[data-dock] .rodape { padding-bottom: 6rem; }
 </head>
 <body>
 
+<!-- ====================== TOPO ====================== -->
+<header class="topo">
+  <img src="./images/logo%20regia.png" alt="Clube Régia Real" width="2172" height="724">
+</header>
+
 <!-- ====================== HERO ====================== -->
-<header class="hero" id="hero">
+<section class="hero" id="hero">
   <div class="hero-emblema" aria-hidden="true"></div>
   <div class="env">
     <div class="hero-texto">
-      <span class="hero-pilula">Clube Régia Real</span>
       <h1>
         Esqueça tudo o que te ensinaram sobre <strong>comer (ou não comer) para emagrecer</strong>.
       </h1>
@@ -754,10 +766,10 @@ body[data-dock] .rodape { padding-bottom: 6rem; }
     </div>
 
     <figure class="hero-foto-wrap">
-      <img src="./images/hero-vitoria.png" alt="Vitória Régia, nutricionista responsável pelo Clube Régia Real.">
+      <img src="./images/hero-vitoria.png?v=2" alt="Vitória Régia, nutricionista responsável pelo Clube Régia Real.">
     </figure>
   </div>
-</header>
+</section>
 
 <!-- ====================== PROBLEMAS ====================== -->
 <section class="secao revela">
@@ -828,22 +840,22 @@ body[data-dock] .rodape { padding-bottom: 6rem; }
     </div>
     <div class="metodo-grade">
       <article class="metodo-card">
-        <span class="metodo-num">#1</span>
+        <span class="metodo-num">1</span>
         <h3>Clareza</h3>
         <p>Você abre o app e já sabe o que comer hoje. A decisão está tomada antes de você chegar cansada nela.</p>
       </article>
       <article class="metodo-card">
-        <span class="metodo-num">#2</span>
+        <span class="metodo-num">2</span>
         <h3>Companhia</h3>
         <p>Um grupo de mulheres na mesma fase, no WhatsApp que você já usa. Ninguém atravessa a quarta-feira sozinha.</p>
       </article>
       <article class="metodo-card">
-        <span class="metodo-num">#3</span>
+        <span class="metodo-num">3</span>
         <h3>Cuidado</h3>
         <p>Nutricionista de verdade acompanhando em dia útil. Não é só uma pasta de vídeos gravados.</p>
       </article>
       <article class="metodo-card">
-        <span class="metodo-num">#4</span>
+        <span class="metodo-num">4</span>
         <h3>Constância</h3>
         <p>O que a gente reconhece aqui é você ter aparecido. Não é a balança.</p>
       </article>
