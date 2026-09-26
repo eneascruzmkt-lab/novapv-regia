@@ -1155,6 +1155,60 @@ body[data-dock] .rodape { padding-bottom: 6rem; }
     trilho.addEventListener("click", function (e) {
       if (moveu > 6) { e.preventDefault(); e.stopPropagation(); }
     }, true);
+
+    // Auto-scroll em loop
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      // Duplicar itens para loop infinito
+      Array.prototype.slice.call(trilho.children).forEach(function (item) {
+        var copia = item.cloneNode(true);
+        copia.setAttribute("aria-hidden", "true");
+        trilho.appendChild(copia);
+      });
+
+      trilho.style.scrollSnapType = "none";
+      trilho.style.scrollBehavior = "auto";
+
+      var VEL = 40;
+      var meio = 0;
+      var medir = function () { meio = trilho.scrollWidth / 2; };
+      medir();
+      window.addEventListener("resize", medir);
+
+      var sobMouse = false, sobToque = false, lupaAberta = false;
+      var pos = 0, anterior = 0;
+
+      trilho.addEventListener("pointerenter", function (e) { if (e.pointerType !== "touch") sobMouse = true; });
+      trilho.addEventListener("pointerleave", function () { sobMouse = false; pos = trilho.scrollLeft; });
+      trilho.addEventListener("pointerdown", function (e) { if (e.pointerType === "touch") sobToque = true; });
+      var soltarAuto = function () { sobToque = false; pos = trilho.scrollLeft; };
+      trilho.addEventListener("pointerup", soltarAuto);
+      trilho.addEventListener("pointercancel", soltarAuto);
+
+      var lupaEl = document.getElementById("lupa");
+      if (lupaEl) {
+        trilho.addEventListener("click", function () { lupaAberta = true; });
+        lupaEl.addEventListener("close", function () { lupaAberta = false; pos = trilho.scrollLeft; });
+      }
+
+      var quadro = function (agora) {
+        if (!anterior) anterior = agora;
+        var dt = Math.min((agora - anterior) / 1000, 0.05);
+        anterior = agora;
+        if (!sobMouse && !sobToque && !lupaAberta && !document.hidden && meio > 1) {
+          if (trilho.style.scrollSnapType !== "none") {
+            trilho.style.scrollSnapType = "none";
+            trilho.style.scrollBehavior = "auto";
+          }
+          pos += VEL * dt;
+          if (pos >= meio) pos -= meio;
+          trilho.scrollLeft = pos;
+        } else {
+          pos = trilho.scrollLeft;
+        }
+        requestAnimationFrame(quadro);
+      };
+      requestAnimationFrame(quadro);
+    }
   }
 
   // Lupa
