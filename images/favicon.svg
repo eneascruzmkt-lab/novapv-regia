@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Clube Régia Real">
+  <rect width="64" height="64" rx="14" fill="#fff7f4"/>
+  <g fill="none" stroke="#c8492a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 15c-3.2 7-3.2 14 0 20 3.2-6 3.2-13 0-20z"/>
+    <path d="M32 35c-4-5-9.5-8-14.5-8 2 6.2 7.2 10.4 14.5 12.4C39.3 37.4 44.5 33.2 46.5 27 41.5 27 36 30 32 35z"/>
+    <path d="M20 45c3.8 3.8 7.6 5.8 12 5.8s8.2-2 12-5.8"/>
+  </g>
+</svg>

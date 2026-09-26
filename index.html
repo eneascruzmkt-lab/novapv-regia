@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clube Régia Real — plano pronto e gente junto</title>
+<meta name="description" content="A comunidade anual da nutricionista Vitória Régia: plano alimentar montado pra sua rotina, cardápio semanal com lista de compras, treinos, app e um grupo de mulheres no WhatsApp.">
+<meta name="theme-color" content="#fff7f4">
+<link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+
+<style>
+/* ============================================================
+   FONTES LOCAIS
+   ============================================================ */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./fonts/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_pqTXtHA-Q.woff2') format('woff2'),
+       url('./fonts/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_pqTbtY.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2') format('woff2'),
+       url('./fonts/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_qU7NSg.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./fonts/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_m07NSg.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('./fonts/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_d0nNSg.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./fonts/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_TknNSg.ttf') format('truetype');
+}
+
+/* ============================================================
+   VARIÁVEIS
+   ============================================================ */
+:root {
+  --aurora:       #fff7f4;
+  --petala:       #fbe6df;
+  --petala-forte: #f7d9d0;
+  --branco:       #ffffff;
+  --cobre:        #b03a42;
+  --cobre-texto:  #8c2a32;
+  --cobre-claro:  #e39aa0;
+  --vinho:        #6b2b3a;
+  --vinho-fundo:  #4a1c28;
+  --vinho-escuro: #33121b;
+  --rosa:         #e8a6ab;
+  --tinta:        #4a3238;
+  --tinta-suave:  #5c484f;
+  --raio:         18px;
+  --raio-peq:     12px;
+  --raio-btn:     999px;
+  --largura:      1080px;
+  --estreita:     720px;
+  --linha:        rgba(74, 50, 56, 0.12);
+  --linha-clara:  rgba(255, 247, 244, 0.2);
+  --sombra:       0 18px 40px -24px rgba(107, 43, 58, 0.45);
+  --sombra-alta:  0 26px 60px -28px rgba(107, 43, 58, 0.5);
+  --fonte-titulo: "Plus Jakarta Sans", system-ui, sans-serif;
+  --fonte-enfase: "Playfair Display", Georgia, serif;
+  --fonte-corpo:  "Plus Jakarta Sans", system-ui, sans-serif;
+
+  --emblema: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 616 698%22%3E%3Cpath fill=%22currentColor%22 fill-rule=%22evenodd%22 d=%22M543 118L542 163L537 209L524 263L504 315L476 365L461 384L459 389L455 392L450 401L434 418L434 420L414 439L414 441L410 443L402 452L400 452L382 470L382 472L370 484L368 489L359 499L336 540L325 570L322 584L324 583L327 572L338 548L361 515L390 488L408 477L410 474L416 472L423 466L438 458L466 437L496 409L496 407L512 390L528 366L528 363L530 362L546 327L560 278L566 245L568 243L566 265L564 268L564 275L562 278L558 302L551 325L544 340L544 344L542 345L533 367L516 394L485 428L483 428L469 442L467 442L444 461L415 478L384 500L363 521L363 523L352 535L351 539L340 555L338 562L336 563L325 593L318 624L316 649L318 648L320 632L322 630L326 613L340 584L357 561L376 542L378 542L394 528L415 515L451 498L492 484L493 482L505 477L522 466L537 452L539 452L554 436L568 417L570 411L576 403L576 400L578 399L589 369L596 331L596 287L594 268L584 219L576 192L543 118ZM76 119L72 124L70 132L65 140L52 173L42 193L32 229L24 271L22 292L22 325L24 343L31 374L40 398L61 432L84 456L86 456L99 468L127 484L167 498L198 512L230 532L248 549L250 549L268 569L280 587L292 612L298 631L300 646L302 647L300 622L291 585L279 556L264 532L251 518L251 516L227 494L173 460L149 442L142 434L140 434L112 406L112 404L101 392L86 368L78 352L76 344L74 343L58 292L52 262L50 240L54 251L54 259L56 261L56 268L58 270L63 296L74 332L76 333L79 343L90 365L102 384L116 400L116 402L124 409L124 411L152 437L182 459L186 460L196 468L202 470L220 482L250 507L250 509L260 518L273 538L276 540L288 564L297 588L295 575L288 558L288 554L266 509L240 474L188 424L188 422L181 416L181 414L170 403L163 392L158 388L157 384L148 374L146 368L132 348L114 314L114 311L112 310L94 262L82 212L76 157L76 119ZM512 28L514 28L517 32L555 111L560 126L562 127L580 172L582 173L588 187L594 207L603 246L608 282L608 332L600 373L592 396L580 419L568 436L558 446L558 448L552 452L552 454L550 454L548 458L546 458L540 465L521 479L495 493L452 507L417 523L386 543L359 568L338 598L325 630L318 668L318 685L320 693L320 698L318 698L314 684L311 659L311 615L320 566L336 524L338 523L338 520L351 497L369 472L394 444L410 394L420 337L422 310L422 269L418 225L406 166L404 164L402 152L387 109L392 111L400 119L400 121L408 128L408 130L413 134L413 136L418 140L430 156L431 160L438 168L440 174L452 192L454 200L456 201L466 224L472 242L472 247L474 249L479 278L479 316L473 343L474 346L478 340L478 337L482 333L492 310L494 309L505 282L519 235L526 198L529 166L528 105L524 78L512 28ZM104 28L106 28L106 34L104 36L95 75L90 110L89 157L92 195L101 241L112 278L124 308L144 346L146 346L146 344L142 333L139 311L139 284L142 260L150 229L167 191L190 154L212 128L212 126L214 126L214 124L229 109L232 109L214 160L201 222L197 261L198 333L208 392L224 443L228 450L240 461L240 463L255 479L274 508L289 539L300 572L306 603L308 625L307 665L301 698L298 698L300 692L300 664L293 629L282 601L262 571L235 545L210 528L169 508L119 491L116 488L102 482L82 468L56 443L56 441L43 426L27 397L20 378L13 350L10 325L11 276L20 224L32 183L40 168L42 160L54 136L58 123L60 122L74 88L76 87L76 84L104 28ZM308 111L310 111L311 115L314 156L320 184L334 220L344 238L346 245L348 246L348 249L363 280L372 311L376 335L377 369L370 418L356 462L344 488L343 485L352 463L363 428L370 393L370 379L372 370L370 331L366 310L356 278L354 277L352 268L350 267L350 264L342 250L342 247L340 246L340 243L320 201L313 178L310 155L308 156L306 175L298 202L262 279L262 283L255 300L248 333L247 376L250 404L262 450L276 488L268 476L268 472L266 471L254 438L254 434L252 432L248 410L246 407L242 377L242 339L248 304L259 271L284 221L300 179L306 142L308 111ZM215 133L189 166L188 170L185 172L184 176L176 187L168 205L166 206L150 250L145 282L145 313L147 329L158 365L167 382L170 384L176 394L213 436L215 436L215 433L212 428L203 397L194 350L191 316L191 264L198 203L205 171L216 137L215 133ZM403 132L402 137L404 139L411 162L422 212L428 274L428 303L424 351L412 410L403 434L403 436L405 436L444 392L449 383L452 381L460 365L467 346L472 325L474 287L468 250L453 208L436 176L403 132ZM308 9L312 9L316 13L322 22L326 33L326 47L324 53L318 64L311 72L308 72L304 68L296 54L294 47L294 33L296 26L303 14L308 9Z%22/%3E%3C/svg%3E");
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: var(--vinho-fundo); }
+body {
+  margin: 0;
+  background: var(--aurora);
+  color: var(--tinta);
+  font-family: var(--fonte-corpo);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+h1, h2, h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--vinho);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: -0.022em;
+  margin: 0 0 0.55em;
+  text-wrap: balance;
+}
+h1 { font-size: clamp(2rem, 5vw, 3rem); }
+h2 { font-size: clamp(1.7rem, 4vw, 2.5rem); }
+h3 { font-size: clamp(1.1rem, 2.2vw, 1.3rem); font-weight: 600; }
+p { margin: 0 0 1em; text-wrap: pretty; }
+p:last-child { margin-bottom: 0; }
+
+.sentimento {
+  font-family: var(--fonte-enfase);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--cobre-texto);
+}
+.vinho-bg .sentimento { color: var(--rosa); }
+
+.env { width: min(100% - 2.4rem, var(--largura)); margin-inline: auto; }
+.env--estreita { width: min(100% - 2.4rem, var(--estreita)); margin-inline: auto; }
+.centro { text-align: center; }
+
+/* ============================================================
+   BOTÃO WHATSAPP
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1.1rem 2.3rem;
+  border: 0;
+  border-radius: var(--raio-btn);
+  background: linear-gradient(170deg, #1aa251 0%, #128c68 55%, #0c6e57 100%);
+  color: var(--branco);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 8px 22px -10px rgba(12, 110, 87, 0.7);
+  transition: transform 0.18s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(170deg, #169146 0%, #0f7c5c 55%, #0a5f4b 100%);
+}
+.btn:active { transform: translateY(0); box-shadow: inset 0 2px 6px rgba(6, 60, 46, 0.35); }
+.btn:focus-visible { outline: 3px solid var(--vinho); outline-offset: 3px; }
+.btn-zap { flex: none; width: 1.3em; height: 1.3em; fill: currentColor; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .btn { animation: cta-pulsa 2.6s ease-in-out 1.2s infinite; }
+  .btn:hover, .btn:active { animation: none; }
+  @keyframes cta-pulsa {
+    0%, 62%, 100% { transform: scale(1); filter: brightness(1); }
+    31%           { transform: scale(1.035); filter: brightness(1.09); }
+  }
+}
+
+.zap-path { d: path("M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"); }
+
+/* ============================================================
+   SEÇÕES
+   ============================================================ */
+.secao { padding: clamp(3rem, 6vw, 5rem) 0; }
+.secao + .secao { padding-top: clamp(2rem, 4vw, 3.5rem); }
+
+.vinho-bg { background: var(--vinho-fundo); color: var(--petala); }
+.vinho-bg h2, .vinho-bg h3 { color: var(--aurora); }
+.petala-bg { background: var(--petala); }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2rem, 5svh, 4rem) 0 clamp(3rem, 6vw, 5rem);
+  background: var(--vinho-fundo);
+  color: var(--petala);
+}
+.hero .env {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: clamp(2rem, 4vw, 3rem);
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .hero .env { grid-template-columns: 1.1fr 0.9fr; }
+}
+.hero-emblema {
+  position: absolute;
+  top: 8%;
+  right: -2%;
+  width: min(36vw, 340px);
+  z-index: 1;
+  aspect-ratio: 616 / 698;
+  opacity: 0.08;
+  filter: blur(3px);
+  pointer-events: none;
+}
+.hero-emblema::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--cobre-claro);
+  -webkit-mask: var(--emblema) center/contain no-repeat;
+          mask: var(--emblema) center/contain no-repeat;
+}
+
+.hero-pilula {
+  display: inline-block;
+  padding: 0.45em 1.1em;
+  border-radius: var(--raio-btn);
+  border: 1.5px solid var(--rosa);
+  color: var(--rosa);
+  font-size: clamp(0.7rem, 1.3vw, 0.88rem);
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+.hero h1 { color: var(--aurora); margin-bottom: 0.5em; font-size: clamp(1.8rem, 4.5vw, 2.8rem); }
+.hero h1 strong { color: var(--rosa); font-weight: 700; }
+.hero .sub {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: var(--petala);
+  max-width: 48ch;
+  margin-bottom: 1.8rem;
+  line-height: 1.6;
+}
+.hero .sub strong { color: var(--aurora); }
+
+.hero-foto-wrap {
+  position: relative;
+  margin: 0;
+  border-radius: var(--raio);
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  background: var(--vinho);
+  border: 2px solid rgba(255,255,255,0.12);
+  box-shadow: var(--sombra-alta);
+}
+.hero-foto-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; }
+
+@media (max-width: 899px) {
+  .hero .env { text-align: left; }
+  .hero-texto { order: 1; }
+  .hero-foto-wrap { order: 0; max-width: 230px; width: 100%; aspect-ratio: 3 / 4; border-radius: var(--raio-peq); align-self: center; justify-self: center; }
+}
+@media (max-width: 560px) {
+  .hero { padding: 1.2rem 0 1.6rem; }
+  .hero h1 { font-size: clamp(1.3rem, 5.8vw, 1.7rem); margin-bottom: 0.3em; }
+  .hero .sub { font-size: 0.88rem; margin-bottom: 1.2rem; line-height: 1.5; }
+  .hero .btn { padding: 0.85rem 1.3rem; font-size: 0.88rem; }
+  .hero-pilula { margin-bottom: 0.8rem; }
+  .hero-foto-wrap { max-width: 207px; }
+}
+
+/* ============================================================
+   PROBLEMAS (dores)
+   ============================================================ */
+.problemas-grade {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 2rem;
+  max-width: 680px;
+}
+.problema {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 1.1rem 1.3rem;
+  border-radius: var(--raio-peq);
+  background: var(--branco);
+  border: 1px solid var(--petala-forte);
+}
+.problema-icone {
+  flex: none;
+  width: 1.6rem; height: 1.6rem;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  background: var(--petala);
+  color: var(--cobre-texto);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+.problema p { font-size: 0.96rem; line-height: 1.45; color: var(--tinta); }
+.problema strong { color: var(--vinho); }
+
+/* ============================================================
+   VIRADA (não é sua culpa)
+   ============================================================ */
+.virada {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+  background: var(--vinho-fundo);
+  color: var(--petala);
+  text-align: center;
+}
+.virada h2 { color: var(--aurora); }
+.virada p { font-size: 1.05rem; max-width: 56ch; margin-inline: auto; }
+.virada-lista {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 1.8rem;
+  max-width: 600px;
+  margin-inline: auto;
+  text-align: left;
+}
+.virada-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 1rem 1.2rem;
+  border-radius: var(--raio-peq);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.virada-icone {
+  flex: none;
+  display: grid;
+  place-content: center;
+  width: 1.6rem; height: 1.6rem;
+  border-radius: 50%;
+  background: rgba(176, 58, 66, 0.3);
+  color: var(--rosa);
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+.virada-item p { font-size: 0.95rem; margin: 0; }
+.virada-item strong { color: var(--aurora); }
+
+/* ============================================================
+   MÉTODO 4C
+   ============================================================ */
+.metodo-grade {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2.4rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+}
+.metodo-card {
+  position: relative;
+  padding: 1.7rem;
+  border-radius: var(--raio);
+  background: var(--branco);
+  border: 1px solid var(--petala-forte);
+}
+.metodo-card h3 { margin-bottom: 0.35rem; }
+.metodo-card p { font-size: 0.95rem; color: var(--tinta-suave); }
+.metodo-num {
+  position: absolute;
+  top: 1.15rem;
+  right: 1.2rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--cobre-claro);
+  pointer-events: none;
+}
+
+/* ============================================================
+   COMO FUNCIONA (2 fases)
+   ============================================================ */
+.fases-grade {
+  display: grid;
+  gap: 1.4rem;
+  margin-top: 2.4rem;
+}
+@media (min-width: 700px) { .fases-grade { grid-template-columns: 1fr 1fr; } }
+.fase {
+  padding: clamp(1.4rem, 3vw, 2rem);
+  border-radius: var(--raio);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--linha-clara);
+}
+.fase-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--raio-btn);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--rosa);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+.fase h3 { color: var(--aurora); margin-bottom: 0.4rem; }
+.fase p { font-size: 0.95rem; }
+.fase-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0.8rem 0 0;
+}
+.fase-lista li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.92rem;
+}
+.fase-lista li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--rosa);
+}
+
+/* ============================================================
+   DEPOIMENTOS (prints)
+   ============================================================ */
+.depo-trilho {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 0.4rem 0;
+  margin-top: 2rem;
+  cursor: grab;
+}
+.depo-trilho::-webkit-scrollbar { display: none; }
+.depo-trilho[data-arrastando] { cursor: grabbing; user-select: none; }
+.depo-trilho img { -webkit-user-drag: none; user-select: none; }
+
+.depo-item {
+  flex: 0 0 clamp(250px, 80vw, 340px);
+  margin: 0;
+  scroll-snap-align: start;
+  border-radius: var(--raio);
+  overflow: hidden;
+}
+.depo-item img { width: 100%; height: auto; display: block; }
+
+.depo-nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-top: 1.4rem;
+}
+.depo-nav button {
+  display: grid;
+  place-content: center;
+  width: 2.8rem; height: 2.8rem;
+  padding: 0;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  background: linear-gradient(170deg, rgba(255,255,255,0.14), rgba(255,255,255,0.04));
+  color: var(--aurora);
+  cursor: pointer;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 6px 14px -8px rgba(0,0,0,0.5);
+  transition: transform 0.15s, background 0.15s;
+}
+.depo-nav button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(170deg, rgba(255,255,255,0.24), rgba(255,255,255,0.08));
+}
+.depo-nav button:active { transform: translateY(0); }
+.depo-nav button[disabled] { opacity: 0.35; cursor: default; }
+.depo-nav svg { width: 1.2rem; height: 1.2rem; }
+
+/* ============================================================
+   O QUE VOCÊ RECEBE
+   ============================================================ */
+.recebe-grade {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2.4rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+}
+.recebe-card {
+  padding: 1.6rem;
+  border-radius: var(--raio);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--linha-clara);
+}
+.recebe-card h3 { color: var(--aurora); margin-bottom: 0.35rem; }
+.recebe-card p { font-size: 0.95rem; color: var(--petala); }
+.recebe-icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem; height: 2.6rem;
+  margin-bottom: 0.9rem;
+  border-radius: 50%;
+  background: rgba(232, 166, 171, 0.15);
+}
+.recebe-icone svg {
+  width: 1.2rem; height: 1.2rem;
+  fill: none; stroke: var(--rosa);
+  stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+}
+
+/* ============================================================
+   BIO (Vitória Régia)
+   ============================================================ */
+.bio {
+  display: grid;
+  gap: clamp(1.8rem, 4vw, 3rem);
+  align-items: center;
+}
+@media (min-width: 860px) { .bio { grid-template-columns: 0.9fr 1.1fr; } }
+
+.bio-foto {
+  position: relative;
+  margin: 0;
+  border-radius: var(--raio);
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background: var(--petala-forte);
+  box-shadow: var(--sombra-alta);
+}
+.bio-foto img { width: 100%; height: 100%; object-fit: cover; }
+
+.bio-chip {
+  position: absolute;
+  left: 0.85rem; right: 0.85rem; bottom: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.6rem 0.7rem;
+  border-radius: var(--raio-btn);
+  background: rgba(40, 22, 28, 0.82);
+  backdrop-filter: blur(6px);
+  color: var(--branco);
+}
+.bio-chip-avatar {
+  flex: none; width: 2.5rem; height: 2.5rem;
+  border-radius: 50%; border: 2px solid rgba(255,255,255,0.55);
+  object-fit: cover;
+}
+.bio-chip-txt { flex: 1; line-height: 1.25; }
+.bio-chip-txt strong { display: block; font-size: 0.98rem; font-weight: 600; }
+.bio-chip-txt span { font-size: 0.78rem; color: var(--petala); }
+.bio-chip-selo {
+  flex: none;
+  display: grid; place-content: center;
+  width: 2.5rem; height: 2.5rem;
+  border-radius: 50%; background: var(--branco);
+}
+.bio-chip-selo::before {
+  content: "";
+  width: 1.3rem; height: 1.45rem;
+  background: var(--cobre);
+  -webkit-mask: var(--emblema) center/contain no-repeat;
+          mask: var(--emblema) center/contain no-repeat;
+}
+
+.bio-pergunta {
+  display: inline-block;
+  margin: 0 0 1rem;
+  padding: 0.7rem 1.2rem;
+  border: 1px solid var(--petala-forte);
+  border-radius: var(--raio-peq);
+  background: linear-gradient(160deg, var(--branco), var(--petala));
+  color: var(--vinho);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+.bio-texto p { font-size: 1.02rem; }
+
+/* ============================================================
+   TRANSFORMAÇÕES
+   ============================================================ */
+.transf-grade {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 2.4rem;
+}
+.transf {
+  margin: 0;
+  border-radius: var(--raio-peq);
+  overflow: hidden;
+  border: 1px solid var(--petala-forte);
+  background: var(--branco);
+}
+.transf img { width: 100%; height: auto; display: block; }
+@media (min-width: 620px) {
+  .transf-grade { grid-template-columns: repeat(3, 1fr); }
+  .transf { aspect-ratio: 0.88; }
+  .transf img { height: 100%; object-fit: cover; }
+}
+
+/* ============================================================
+   CTA FINAL
+   ============================================================ */
+.cta-final {
+  text-align: center;
+  padding: clamp(3rem, 7vw, 5.5rem) 0;
+  background: var(--vinho-fundo);
+  color: var(--petala);
+}
+.cta-final h2 { color: var(--aurora); }
+.cta-final p { font-size: 1.05rem; max-width: 50ch; margin-inline: auto; }
+.cta-final .btn { margin-top: 1.6rem; }
+.cta-final-selos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.4rem;
+}
+.cta-final-selo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--raio-btn);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--petala);
+}
+.cta-final-selo svg {
+  width: 0.95rem; height: 0.95rem;
+  fill: none; stroke: var(--rosa);
+  stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+}
+
+/* ============================================================
+   DOCK FIXO
+   ============================================================ */
+.dock {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 40;
+  padding: 0.7rem 1rem calc(0.7rem + env(safe-area-inset-bottom));
+  background: rgba(74, 28, 40, 0.97);
+  border-top: 1px solid var(--linha-clara);
+  transform: translateY(110%);
+  visibility: hidden;
+  transition: transform 0.25s ease, visibility 0.25s;
+}
+.dock[data-visivel] { transform: translateY(0); visibility: visible; }
+.dock-inner {
+  width: min(100% - 1rem, 620px);
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dock .btn { flex: none; padding: 0.85rem 1.4rem; font-size: 0.93rem; }
+
+/* ============================================================
+   RODAPÉ
+   ============================================================ */
+.rodape {
+  background: var(--vinho-escuro);
+  color: var(--petala);
+  padding: 2.4rem 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.rodape .fino {
+  margin: 0;
+  font-size: 0.79rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* ============================================================
+   LUPA
+   ============================================================ */
+.lupa {
+  max-width: min(94vw, 620px);
+  max-height: 92svh;
+  padding: 0; border: 0;
+  border-radius: var(--raio);
+  background: var(--petala);
+  overflow: visible;
+}
+.lupa::backdrop { background: rgba(38, 14, 20, 0.78); }
+.lupa img { width: 100%; height: auto; display: block; border-radius: var(--raio); }
+.lupa-fechar {
+  position: absolute;
+  top: -0.85rem; right: -0.85rem;
+  width: 2.4rem; height: 2.4rem;
+  display: grid; place-content: center;
+  padding: 0;
+  border: 1px solid var(--petala-forte);
+  border-radius: 50%;
+  background: var(--branco);
+  color: var(--vinho);
+  box-shadow: var(--sombra);
+  cursor: pointer;
+}
+.lupa-fechar svg { width: 1.05rem; height: 1.05rem; }
+@media (max-width: 560px) {
+  .lupa-fechar { top: 0.5rem; right: 0.5rem; }
+}
+
+/* ============================================================
+   ANIMAÇÕES DE ENTRADA
+   ============================================================ */
+@media (prefers-reduced-motion: no-preference) {
+  .revela {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s cubic-bezier(.22,.7,.3,1), transform 0.7s cubic-bezier(.22,.7,.3,1);
+  }
+  .revela.visivel { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* ============================================================
+   PADDING EXTRA POR CAUSA DO DOCK
+   ============================================================ */
+body[data-dock] .rodape { padding-bottom: 6rem; }
+@media (max-width: 520px) { body[data-dock] .rodape { padding-bottom: 8rem; } }
+</style>
+</head>
+<body>
+
+<!-- ====================== HERO ====================== -->
+<header class="hero" id="hero">
+  <div class="hero-emblema" aria-hidden="true"></div>
+  <div class="env">
+    <div class="hero-texto">
+      <span class="hero-pilula">Clube Régia Real</span>
+      <h1>
+        Esqueça tudo o que te ensinaram sobre <strong>comer (ou não comer) para emagrecer</strong>.
+      </h1>
+      <p class="sub">
+        Entre no Clube Régia Real e descubra como
+        <strong>"ter um plano que cabe na sua rotina para emagrecer de verdade"</strong>:
+        o segredo para eliminar até 12&nbsp;kg em apenas 3 meses.
+      </p>
+
+      <button class="btn" type="button" data-comprar>
+        <svg class="btn-zap" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Quero emagrecer de verdade
+      </button>
+    </div>
+
+    <figure class="hero-foto-wrap">
+      <img src="./images/hero-vitoria.png" alt="Vitória Régia, nutricionista responsável pelo Clube Régia Real.">
+    </figure>
+  </div>
+</header>
+
+<!-- ====================== PROBLEMAS ====================== -->
+<section class="secao revela">
+  <div class="env env--estreita">
+    <div class="centro">
+      <h2>Você <span class="sentimento">se reconhece</span> nisso?</h2>
+    </div>
+
+    <div class="problemas-grade">
+      <div class="problema">
+        <span class="problema-icone">?</span>
+        <p>Começa toda segunda e <strong>desiste na quarta</strong>, sem saber por que a motivação sumiu de novo.</p>
+      </div>
+      <div class="problema">
+        <span class="problema-icone">?</span>
+        <p>Já tentou <strong>de tudo</strong>, de dieta de internet a caneta emagrecedora, e sempre volta pro mesmo peso.</p>
+      </div>
+      <div class="problema">
+        <span class="problema-icone">?</span>
+        <p>A rotina vira do avesso e <strong>não tem ninguém por perto</strong> pra dizer "eu também, continua".</p>
+      </div>
+      <div class="problema">
+        <span class="problema-icone">?</span>
+        <p>Decide tudo sozinha: <strong>o que comprar, o que cozinhar</strong>, e o cansaço chega antes do jantar.</p>
+      </div>
+      <div class="problema">
+        <span class="problema-icone">?</span>
+        <p>Sabe que precisa de acompanhamento, mas <strong>consulta particular custa caro</strong> e cabe em pouca gente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== VIRADA ====================== -->
+<section class="virada revela">
+  <div class="env env--estreita">
+    <h2>Não é <span class="sentimento">sua culpa</span>.</h2>
+    <p>
+      A maioria das dietas e métodos ignora completamente a fisiologia feminina.
+    </p>
+
+    <div class="virada-lista">
+      <div class="virada-item virada-item--nao">
+        <span class="virada-icone">&#10005;</span>
+        <p>90% das dietas foram desenvolvidas com base em estudos feitos em <strong>homens</strong></p>
+      </div>
+      <div class="virada-item virada-item--nao">
+        <span class="virada-icone">&#10005;</span>
+        <p>Hormônios masculinos são estáveis, enquanto os femininos <strong>mudam diariamente</strong> e drasticamente com a idade</p>
+      </div>
+      <div class="virada-item virada-item--nao">
+        <span class="virada-icone">&#10005;</span>
+        <p>Métodos como jejum prolongado e low-carb extremo podem <strong>destruir seus hormônios femininos</strong></p>
+      </div>
+      <div class="virada-item virada-item--nao">
+        <span class="virada-icone">&#10005;</span>
+        <p>Contar calorias ignora que seu corpo <strong>processa alimentos diferentemente</strong> dependendo do seu estado hormonal</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== MÉTODO 4C ====================== -->
+<section class="secao petala-bg revela">
+  <div class="env">
+    <div class="centro">
+      <h2><span class="sentimento">Método Régia 4C</span>: quatro coisas que sustentam a rotina</h2>
+    </div>
+    <div class="metodo-grade">
+      <article class="metodo-card">
+        <span class="metodo-num">#1</span>
+        <h3>Clareza</h3>
+        <p>Você abre o app e já sabe o que comer hoje. A decisão está tomada antes de você chegar cansada nela.</p>
+      </article>
+      <article class="metodo-card">
+        <span class="metodo-num">#2</span>
+        <h3>Companhia</h3>
+        <p>Um grupo de mulheres na mesma fase, no WhatsApp que você já usa. Ninguém atravessa a quarta-feira sozinha.</p>
+      </article>
+      <article class="metodo-card">
+        <span class="metodo-num">#3</span>
+        <h3>Cuidado</h3>
+        <p>Nutricionista de verdade acompanhando em dia útil. Não é só uma pasta de vídeos gravados.</p>
+      </article>
+      <article class="metodo-card">
+        <span class="metodo-num">#4</span>
+        <h3>Constância</h3>
+        <p>O que a gente reconhece aqui é você ter aparecido. Não é a balança.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== COMO FUNCIONA ====================== -->
+<section class="secao vinho-bg revela">
+  <div class="env">
+    <div class="centro">
+      <h2>Como funciona <span class="sentimento">na prática</span></h2>
+      <p style="max-width:52ch;margin-inline:auto;font-size:1.02rem;">1 ano de acesso. 2 pilares. Resultados que ficam.</p>
+    </div>
+
+    <div class="fases-grade">
+      <div class="fase">
+        <span class="fase-tag">Pilar 1</span>
+        <h3>Plano pronto</h3>
+        <p>Tudo montado pra sua rotina, sem achismo.</p>
+        <ul class="fase-lista">
+          <li>Plano alimentar personalizado</li>
+          <li>Cardápio semanal com lista de compras</li>
+          <li>Treinos que cabem no seu dia</li>
+          <li>Tudo no app, sempre à mão</li>
+        </ul>
+      </div>
+      <div class="fase">
+        <span class="fase-tag">Pilar 2</span>
+        <h3>Gente junto</h3>
+        <p>Ninguém atravessa a semana sozinha.</p>
+        <ul class="fase-lista">
+          <li>Grupo de mulheres no WhatsApp</li>
+          <li>Lives toda semana com a equipe</li>
+          <li>Suporte em dia útil</li>
+          <li>Desafio da Coroa mensal</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== DEPOIMENTOS ====================== -->
+<section class="secao vinho-bg revela" style="padding-top:0;">
+  <div class="env">
+    <div class="centro">
+      <h2>O que as mulheres <span class="sentimento">do Clube</span> contam</h2>
+    </div>
+
+    <div class="depo-trilho" id="depo-trilho" tabindex="0">
+      <figure class="depo-item"><button type="button" class="depo-zoom" style="display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;"><img src="./images/depo-01.webp" width="700" height="700" alt="Depoimento de participante do Clube"></button></figure>
+      <figure class="depo-item"><button type="button" class="depo-zoom" style="display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;"><img src="./images/depo-02.webp" width="700" height="700" loading="lazy" alt="Depoimento de participante do Clube"></button></figure>
+      <figure class="depo-item"><button type="button" class="depo-zoom" style="display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;"><img src="./images/depo-03.webp" width="700" height="700" loading="lazy" alt="Depoimento de participante do Clube"></button></figure>
+      <figure class="depo-item"><button type="button" class="depo-zoom" style="display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;"><img src="./images/depo-04.webp" width="700" height="700" loading="lazy" alt="Depoimento de participante do Clube"></button></figure>
+      <figure class="depo-item"><button type="button" class="depo-zoom" style="display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;"><img src="./images/depo-05.webp" width="700" height="700" loading="lazy" alt="Depoimento de participante do Clube"></button></figure>
+      <figure class="depo-item"><button type="button" class="depo-zoom" style="display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;"><img src="./images/depo-06.webp" width="700" height="700" loading="lazy" alt="Resultado de participante do Clube"></button></figure>
+      <figure class="depo-item"><button type="button" class="depo-zoom" style="display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;"><img src="./images/depo-07.webp" width="700" height="700" loading="lazy" alt="Depoimento de participante do Clube"></button></figure>
+      <figure class="depo-item"><button type="button" class="depo-zoom" style="display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;"><img src="./images/depo-08.webp" width="700" height="700" loading="lazy" alt="Depoimento de participante do Clube"></button></figure>
+      <figure class="depo-item"><button type="button" class="depo-zoom" style="display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;"><img src="./images/depo-09.webp" width="700" height="700" loading="lazy" alt="Depoimento de participante do Clube"></button></figure>
+      <figure class="depo-item"><button type="button" class="depo-zoom" style="display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;"><img src="./images/depo-10.webp" width="700" height="700" loading="lazy" alt="Depoimento de participante do Clube"></button></figure>
+      <figure class="depo-item"><button type="button" class="depo-zoom" style="display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;"><img src="./images/depo-11.webp" width="700" height="700" loading="lazy" alt="Depoimento de participante do Clube"></button></figure>
+      <figure class="depo-item"><button type="button" class="depo-zoom" style="display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;"><img src="./images/depo-12.webp" width="700" height="700" loading="lazy" alt="Resultado de participante do Clube"></button></figure>
+    </div>
+    <div class="depo-nav">
+      <button type="button" data-dir="-1" aria-label="Anterior">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <button type="button" data-dir="1" aria-label="Próximo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== TRANSFORMAÇÕES ====================== -->
+<section class="secao petala-bg revela">
+  <div class="env">
+    <div class="centro">
+      <h2>O antes e o depois de quem <span class="sentimento">seguiu o plano</span></h2>
+      <p style="max-width:50ch;margin-inline:auto;font-size:0.95rem;color:var(--tinta-suave);">Fotos enviadas pelas próprias participantes. Cada corpo responde de um jeito.</p>
+    </div>
+    <div class="transf-grade">
+      <figure class="transf"><img src="./images/transf-1.webp" width="720" height="894" alt="Antes e depois de participante"></figure>
+      <figure class="transf"><img src="./images/transf-2.webp" width="720" height="809" loading="lazy" alt="Antes e depois de participante"></figure>
+      <figure class="transf"><img src="./images/transf-3.webp" width="720" height="822" loading="lazy" alt="Antes e depois de participante"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== O QUE VOCÊ RECEBE ====================== -->
+<section class="secao vinho-bg revela">
+  <div class="env">
+    <div class="centro">
+      <h2>Plano pronto e gente junto, <span class="sentimento">por um ano</span></h2>
+    </div>
+    <div class="recebe-grade">
+      <article class="recebe-card">
+        <div class="recebe-icone">
+          <svg viewBox="0 0 24 24"><path d="M12 2L4 7v10l8 5 8-5V7l-8-5z"/><path d="M12 22V12"/><path d="M20 7l-8 5-8-5"/></svg>
+        </div>
+        <h3>Plano alimentar seu</h3>
+        <p>Montado a partir das suas informações e da sua rotina de verdade.</p>
+      </article>
+      <article class="recebe-card">
+        <div class="recebe-icone">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        </div>
+        <h3>Cardápio toda semana</h3>
+        <p>Com comida de mercado normal e a lista de compras já pronta.</p>
+      </article>
+      <article class="recebe-card">
+        <div class="recebe-icone">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+        </div>
+        <h3>Treinos que cabem no dia</h3>
+        <p>Pensados pra rotina apertada, não pra quem tem duas horas livres.</p>
+      </article>
+      <article class="recebe-card">
+        <div class="recebe-icone">
+          <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        </div>
+        <h3>App exclusivo</h3>
+        <p>Plano, cardápios e treinos num lugar só, sempre à mão.</p>
+      </article>
+      <article class="recebe-card">
+        <div class="recebe-icone">
+          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        </div>
+        <h3>Grupo no WhatsApp</h3>
+        <p>Mulheres na mesma fase, no app que você já abre cem vezes por dia.</p>
+      </article>
+      <article class="recebe-card">
+        <div class="recebe-icone">
+          <svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+        </div>
+        <h3>Lives com a equipe</h3>
+        <p>Ao vivo toda semana, com acervo de aulas gravadas pra rever quando quiser.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== BIO ====================== -->
+<section class="secao revela">
+  <div class="env">
+    <div class="bio">
+      <figure class="bio-foto">
+        <img src="./images/vitoria-sobre.webp" width="900" height="1125" alt="Vitória Régia, nutricionista responsável pelo Clube.">
+      </figure>
+
+      <div class="bio-texto">
+        <span class="bio-pergunta">Quem vai te acompanhar?</span>
+        <h2 style="margin-bottom:0.5rem;">Vitória Régia</h2>
+        <p>
+          Eu não sou a nutricionista que entrega um cardápio e desaparece até a
+          próxima consulta. A frase que eu mais ouço aqui é
+          <span class="sentimento">"eu já tentei de tudo"</span>: de outros
+          profissionais a dieta de internet e caneta emagrecedora, perdendo e
+          recuperando sempre o mesmo peso.
+        </p>
+        <p>
+          Sou nutricionista de saúde integrativa. Na prática, eu te analiso de
+          ponta a ponta: exames, sono, rotina, treino, o que você ama comer e o
+          que não come de jeito nenhum. E monto um plano cheio de
+          substituição, porque ninguém precisa passar fome para emagrecer.
+        </p>
+        <p>
+          Montei a Régia Real com uma equipe de nutrição, educação física e
+          medicina, atendendo presencialmente em Natal e online. O Clube
+          nasceu daí: aqui eu estou no grupo. Você escreve numa terça à noite
+          e, no dia útil seguinte, tem resposta de quem entende.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== CTA FINAL ====================== -->
+<section class="cta-final revela" id="entrar">
+  <div class="env env--estreita">
+    <h2>Sua vaga: um ano inteiro de <span class="sentimento">Clube Régia Real</span></h2>
+    <p>
+      Plano alimentar montado pra sua rotina, cardápio semanal, treinos,
+      app exclusivo e um grupo de mulheres no WhatsApp. Tudo com
+      acompanhamento da equipe em dia útil.
+    </p>
+
+    <button class="btn" type="button" data-comprar>
+      <svg class="btn-zap" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Entrar no grupo VIP
+    </button>
+
+    <div class="cta-final-selos">
+      <span class="cta-final-selo">
+        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 11h18"/></svg>
+        1 ano de acesso
+      </span>
+      <span class="cta-final-selo">
+        <svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.2-2.9 7.9-7 9-4.1-1.1-7-4.8-7-9V6l7-3z"/><path d="M9 12.2l2.2 2.2L15.4 10"/></svg>
+        Garantia de 7 dias
+      </span>
+      <span class="cta-final-selo">
+        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Acompanhamento real
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== DOCK FIXO ====================== -->
+<div class="dock" id="dock" aria-hidden="true">
+  <div class="dock-inner">
+    <button class="btn" type="button" data-comprar>
+      <svg class="btn-zap" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Entrar no grupo VIP
+    </button>
+  </div>
+</div>
+
+<!-- ====================== RODAPÉ ====================== -->
+<footer class="rodape">
+  <div class="env">
+    <p class="fino">
+      O Clube Régia Real é um serviço de acompanhamento nutricional em comunidade e
+      não substitui consulta individual, diagnóstico ou tratamento médico. Os
+      resultados variam de pessoa para pessoa, conforme rotina, histórico e adesão.
+      Nenhum resultado é prometido ou garantido.
+    </p>
+  </div>
+</footer>
+
+<!-- ====================== LUPA ====================== -->
+<dialog class="lupa" id="lupa" aria-label="Print do depoimento ampliado">
+  <button class="lupa-fechar" type="button" aria-label="Fechar">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <img alt="">
+</dialog>
+
+<!-- ====================== JS ====================== -->
+<script>
+(function () {
+  "use strict";
+
+  var CHECKOUT = "https://chat.whatsapp.com/L6i0n2xtfxPLIwFXDhKzwg";
+
+  // Botões de compra
+  document.querySelectorAll("[data-comprar]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      if (CHECKOUT) window.location.href = CHECKOUT;
+    });
+  });
+
+  // Dock fixo
+  var dock = document.getElementById("dock");
+  var hero = document.getElementById("hero");
+  var entrar = document.getElementById("entrar");
+
+  if (dock && hero && "IntersectionObserver" in window) {
+    var passouDoTopo = false, naOferta = false;
+    var aplicar = function () {
+      var mostrar = passouDoTopo && !naOferta;
+      dock.toggleAttribute("data-visivel", mostrar);
+      dock.setAttribute("aria-hidden", String(!mostrar));
+      document.body.toggleAttribute("data-dock", mostrar);
+    };
+    new IntersectionObserver(function (e) { passouDoTopo = !e[0].isIntersecting; aplicar(); }).observe(hero);
+    if (entrar) new IntersectionObserver(function (e) { naOferta = e[0].isIntersecting; aplicar(); }).observe(entrar);
+  }
+
+  // Carrossel de depoimentos
+  var trilho = document.getElementById("depo-trilho");
+  if (trilho) {
+    var passo = function () {
+      var item = trilho.querySelector(".depo-item");
+      if (!item) return trilho.clientWidth;
+      return item.getBoundingClientRect().width + parseFloat(getComputedStyle(trilho).columnGap || 0);
+    };
+    document.querySelectorAll(".depo-nav button").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var dir = Number(b.dataset.dir);
+        trilho.scrollBy({ left: dir * passo() });
+      });
+    });
+
+    // Arrastar com mouse
+    var arrastando = false, xI = 0, sI = 0, moveu = 0;
+    trilho.addEventListener("pointerdown", function (e) {
+      if (e.pointerType !== "mouse" || e.button !== 0) return;
+      arrastando = true; moveu = 0; xI = e.clientX; sI = trilho.scrollLeft;
+      trilho.style.scrollSnapType = "none"; trilho.style.scrollBehavior = "auto";
+      trilho.setPointerCapture(e.pointerId); trilho.dataset.arrastando = "";
+    });
+    trilho.addEventListener("pointermove", function (e) {
+      if (!arrastando) return;
+      moveu = Math.abs(e.clientX - xI);
+      trilho.scrollLeft = sI - (e.clientX - xI);
+    });
+    var soltar = function (e) {
+      if (!arrastando) return;
+      arrastando = false; delete trilho.dataset.arrastando;
+      trilho.style.scrollBehavior = ""; trilho.style.scrollSnapType = "";
+      if (trilho.hasPointerCapture && e.pointerId !== undefined) {
+        try { trilho.releasePointerCapture(e.pointerId); } catch (err) {}
+      }
+    };
+    trilho.addEventListener("pointerup", soltar);
+    trilho.addEventListener("pointercancel", soltar);
+    trilho.addEventListener("click", function (e) {
+      if (moveu > 6) { e.preventDefault(); e.stopPropagation(); }
+    }, true);
+  }
+
+  // Lupa
+  var lupa = document.getElementById("lupa");
+  if (lupa && typeof lupa.showModal === "function") {
+    var lupaImg = lupa.querySelector("img");
+    document.querySelectorAll(".depo-zoom").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var im = btn.querySelector("img");
+        if (!im) return;
+        lupaImg.src = im.currentSrc || im.src;
+        lupaImg.alt = im.alt;
+        lupa.showModal();
+      });
+    });
+    lupa.querySelector(".lupa-fechar").addEventListener("click", function () { lupa.close(); });
+    lupa.addEventListener("click", function (e) { if (e.target === lupa) lupa.close(); });
+  }
+
+  // Revelação por scroll
+  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("visivel"); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".revela").forEach(function (el) { obs.observe(el); });
+  }
+})();
+</script>
+
+</body>
+</html>
